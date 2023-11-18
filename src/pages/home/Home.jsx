@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(()=>{
     const fetchExpense=async()=>{
       try {
-        const res=await axios.get(`http://localhost:5000/api/v1/expense/by-user/${user._id}`);
+        const res=await axios.get(`https://expense-backend-xz7w.onrender.com/api/v1/expense/by-user/${user._id}`);
         console.log(res.data)
         setExpenses(res.data);
       } catch (error) {
@@ -30,7 +30,7 @@ const Home = () => {
   useEffect(()=>{
     const fetchIncome=async()=>{
       try {
-        const res=await axios.get(`http://localhost:5000/api/v1/income/by-user/${user._id}`);
+        const res=await axios.get(`https://expense-backend-xz7w.onrender.com/api/v1/income/by-user/${user._id}`);
         console.log(res.data)
         setIncomes(res.data);
       } catch (error) {
